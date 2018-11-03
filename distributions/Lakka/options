@@ -224,6 +224,9 @@
 
 # IR remote keymaps supported in default config
   IR_REMOTE_KEYMAPS=""
+  
+# Displayserver to use (x11 / no)
+  DISPLAYSERVER="no"  
 
 LAKKA_MIRROR="http://sources.lakka.tv"
 
