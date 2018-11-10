@@ -8,7 +8,7 @@ After=systemd-tmpfiles-setup.service
 What=none
 Where=/tmp/joypads
 Type=overlay
-Options=lowerdir=/etc/retroarch-joypad-autoconfig,upperdir=/storage/.config/retroarch/joypads,workdir=/storage/.tmp/joypads-workdir
+Options=lowerdir=/etc/retroarch-joypad-autoconfig,upperdir=/storage/joypads,workdir=/storage/.tmp/joypads-workdir
 
 [Install]
 WantedBy=retroarch.target
