@@ -201,13 +201,13 @@ post_install() {
   # link default.target to retroarch.target
   ln -sf retroarch.target $INSTALL/usr/lib/systemd/system/default.target
   
- # enable_service retroarch-autostart.service
- # enable_service retroarch.service
- # enable_service tmp-cores.mount
- # enable_service tmp-joypads.mount
- # enable_service tmp-database.mount
- # enable_service tmp-assets.mount
- # enable_service tmp-shaders.mount
+  enable_service retroarch-autostart.service
+  enable_service retroarch.service
+  enable_service tmp-cores.mount
+  enable_service tmp-joypads.mount
+  enable_service tmp-database.mount
+  enable_service tmp-assets.mount
+  enable_service tmp-shaders.mount
 }
 
 post_makeinstall_target() {
