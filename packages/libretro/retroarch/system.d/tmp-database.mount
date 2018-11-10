@@ -8,7 +8,7 @@ After=systemd-tmpfiles-setup.service
 What=none
 Where=/tmp/database
 Type=overlay
-Options=lowerdir=/usr/share/libretro-database,upperdir=/storage/.config/retroarch/database,workdir=/storage/.tmp/database-workdir
+Options=lowerdir=/usr/share/libretro-database,upperdir=/storage/database,workdir=/storage/.tmp/database-workdir
 
 [Install]
 WantedBy=retroarch.target
