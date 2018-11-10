@@ -99,12 +99,6 @@ fbset -fb /dev/fb0 -g $xRes $yRes $vXRes $vYRes $bpp;
 echo rm default > /sys/class/vfm/map
 echo add default decoder ppmgr deinterlace amvideo > /sys/class/vfm/map
 
-# Enable framebuffer device
-echo 0 > /sys/class/graphics/fb0/blank
-
-# Blank fb1 to prevent static noise
-echo 1 > /sys/class/graphics/fb1/blank
-
 # set smp_affinity
 #            Binary       Hex
 #    CPU 0    0001         1
