@@ -12,6 +12,7 @@ PKG_DEPENDS_TARGET="toolchain util-macros xtrans libXau libxcb"
 PKG_LONGDESC="LibX11 is the main X11 library containing all the client-side code to access the X11 windowing system."
 PKG_TOOLCHAIN="autotools"
 
+
 PKG_CONFIGURE_OPTS_TARGET="--disable-loadable-i18n \
                            --disable-loadable-xcursor \
                            --enable-xthreads \
@@ -30,3 +31,10 @@ PKG_CONFIGURE_OPTS_TARGET="--disable-loadable-i18n \
                            --disable-ipv6 \
                            --without-launchd \
                            --without-lint"
+
+pre_build_target() {
+touch $TOOLCHAIN/armv7a-libreelec-linux-gnueabi/sysroot/usr/include/gnu/stubs-soft.h
+}
+post_build_target() {
+rm $TOOLCHAIN/armv7a-libreelec-linux-gnueabi/sysroot/usr/include/gnu/stubs-soft.h
+}
