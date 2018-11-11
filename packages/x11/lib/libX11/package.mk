@@ -35,6 +35,6 @@ PKG_CONFIGURE_OPTS_TARGET="--disable-loadable-i18n \
 pre_build_target() {
 touch $TOOLCHAIN/armv7a-libreelec-linux-gnueabi/sysroot/usr/include/gnu/stubs-soft.h
 }
-post_build_target() {
+post_make_target() {
 rm $TOOLCHAIN/armv7a-libreelec-linux-gnueabi/sysroot/usr/include/gnu/stubs-soft.h
 }
